@@ -1,0 +1,55 @@
+ul {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+li {
+    display: flex;
+    border: solid 1px black;
+    list-style-type: none;
+    margin-left: 0;
+    width: 248px;
+    height: 21px;
+    padding: 5px 1px 0 3px;
+    margin-top: 2px;
+}
+
+li:first-child {
+    margin-top: 0px;
+}
+
+li:hover {
+    background-color: #e7e7ee;
+}
+
+input[type="text"] {
+    width: 250px;
+    height: 21px;
+}
+
+.sortable-ghost {
+    border: dashed 1px black;
+    background-color: rgba(240, 240, 240, 1);
+}
+
+.remove {
+    float: right;
+    cursor: pointer;
+}
+
+.remove:hover {
+    font-weight: bold;
+}
+
+.markerName {
+    width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#google-map {
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 5px;
+}

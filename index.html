@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='./src/css/style.css' type='text/css'>
+
+	<!-- AngularJS -->
+	<script src="./vendor/angular/angular.js"></script>
+
+	<!-- Sortable.js -->
+	<script src="./vendor/Sortable/Sortable.js"></script>
+
+	<!-- ng-sortable.js -->
+	<script src="./vendor/Sortable/ng-sortable.js"></script>
+
+	<!-- google maps -->
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+
+	<!-- my script -->
+	<script src="./src/js/qtApp.js"></script>
+
+	<title>Google map basics</title>
+</head>
+<body ng-app="googleMapRoute">
+	<div ng-controller="googleMapRouteController">
+		
+		<div id='google-map' google-map></div>
+		
+		<form ng-submit="addItem(newItem)" autocomplete="off">
+			<input type="text" ng-model="newItem" placeholder="Type a new marker..." />
+		</form>
+		
+		<ul ng-sortable="{animation:100, onUpdate: onUpdate}">
+			<li ng-repeat="item in items track by $index" >
+				<span class="markerName">{{item}}</span>
+				<span class='remove' ng-click='removeItem(item)'>&times;</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

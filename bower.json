@@ -1,0 +1,9 @@
+{
+  "name": "GMaps sample",
+  "version": "0.1",
+  "dependencies": {
+    "Sortable": "~1.4.1",
+    "ng-sortable": "https://github.com/RubaXa/Sortable/blob/master/ng-sortable.js",
+    "angular": "~1.4.7"
+  }
+}
